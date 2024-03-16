@@ -14,7 +14,44 @@
         <button>Log in</button>
     </div>
 
-    <div id="main"></div>
+    <div id="main">
+        <div id="add-book">
+            <button>+ Add book</button>
+        </div>
+
+        <div id="books">
+
+            <div class="book">
+                <div>Title</div>
+                <div>Author</div>
+                <div>100 Pages</div>
+                <button class="read">Not read</button>
+                <button class="remove">Remove</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <dialog id="form-dialog">
+        <!-- id="add-book-form" -->
+        <form> 
+            <label>Add new book</label>
+
+            <input type="text" class="title" placeholder="Title"/>
+
+            <input type="text" placeholder="Author"/>
+
+            <input type="number" min="0" placeholder="Pages"/>
+
+            <div id="read-checkbox">
+                <label>Have you read it?</label>
+                <input type="checkbox"/>
+            </div>
+
+            <button id="submit-add-book" type="submit">Submit</button>
+        </form>
+    </dialog>
 
     <div id="footer">
         <div id="copyright">
