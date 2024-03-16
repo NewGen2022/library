@@ -15,6 +15,10 @@ body{
     min-height: 100vh;
 }
 
+button{
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+}
 /* HEADER STYLES */
 #header{
     display: flex;
@@ -31,9 +35,7 @@ body{
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: Poppins, sans-serif;
-    font-size: clamp(12px, 3vw, 18px);
-    font-weight: 600;
+    font-size: clamp(14px, 3vw, 18px);
     width: clamp(45px, 15vw, 90px);
     padding: 10px;
     height: 45px;
@@ -55,10 +57,164 @@ body{
 
 /* MAIN STYLES */
 #main{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
+
+#add-book{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+#add-book button{
+    font-size: clamp(16px, 3vw, 22px);
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    color: rgb(224, 231, 237);
+}
+#add-book button:hover{
+    cursor: pointer;
+    background-color: #464646;
+}
+
+#books{
+    display: grid; 
+    margin: 50px 70px;
+    grid-template-columns: repeat(auto-fill, 350px);
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgb(224, 231, 237);
+    color: #323433;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(149, 149, 149);
+}
+.book button{
+    width: 90%;
+    font-size: 18px;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: none;
+    color: rgb(224, 231, 237);
+    cursor: pointer;
+}
+.book button:hover{
+    transform: scale(1.05);
+}
+.book button:active{
+    transform: scale(0.99);
+}
+
+.read{
+    margin-top: 10px;
+    background-color: rgb(226, 1, 1);
+    /* background-color: rgb(18, 211, 0);  */
+}
+
+.remove{
+    background-color: #343233;
+}
+.remove:hover{
+    background-color: #454345;
+}
 /* MAIN STYLES */
+
+/* FORM STYLES */
+#form-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    width: 300px;
+    background-color: rgb(237, 237, 237);
+    color: #323433;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid white;
+    z-index: 1;
+}
+
+#form-dialog label{
+    font-weight: 900;
+    font-size: 24px;
+}
+
+#form-dialog input:not([type="checkbox"]){
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    padding: 0 12px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+#form-dialog input:not([type="checkbox"]):focus{
+    font-weight: 500;
+}
+
+#form-dialog input[type="checkbox"] {
+    width: 10%;
+    height: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#form-dialog button{
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(21, 255, 0);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#read-checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#read-checkbox label{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.title{
+    margin-top: 20px;
+}
+/* FORM STYLES */
 
 /* FOOTER STYLES */
 #footer{
