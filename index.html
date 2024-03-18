@@ -20,29 +20,20 @@
         </div>
 
         <div id="books">
-
-            <div class="book">
-                <div>Title</div>
-                <div>Author</div>
-                <div>100 Pages</div>
-                <button class="read">Not read</button>
-                <button class="remove">Remove</button>
-            </div>
             
         </div>
 
     </div>
 
     <dialog id="form-dialog">
-        <!-- id="add-book-form" -->
-        <form> 
+        <form id="add-book-form"> 
             <label>Add new book</label>
 
-            <input type="text" class="title" placeholder="Title"/>
+            <input type="text" class="title" placeholder="Title" required/>
 
-            <input type="text" placeholder="Author"/>
+            <input type="text" class="author" placeholder="Author" required/>
 
-            <input type="number" min="0" placeholder="Pages"/>
+            <input type="number" class="pages" min="0" placeholder="Pages" required/>
 
             <div id="read-checkbox">
                 <label>Have you read it?</label>
