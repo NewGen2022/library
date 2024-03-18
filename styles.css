@@ -86,7 +86,7 @@ button{
 #books{
     display: grid; 
     margin: 50px 70px;
-    grid-template-columns: repeat(auto-fill, 350px);
+    grid-template-columns: repeat(auto-fit, 350px);
     align-items: center;
     justify-content: center;
     gap: 50px;
@@ -126,7 +126,10 @@ button{
 .read{
     margin-top: 10px;
     background-color: rgb(226, 1, 1);
-    /* background-color: rgb(18, 211, 0);  */
+}
+
+.green{
+    background-color: rgb(18, 211, 0);
 }
 
 .remove{
